@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="list_item_product_height">@dimen/_100sdp</dimen>
+    <dimen name="list_item_with_divider_height">@dimen/_132sdp</dimen>
+    <dimen name="padding_standard">@dimen/_16sdp</dimen>
+    <dimen name="padding_half">@dimen/_8sdp</dimen>
+    <dimen name="product_name_text_size">@dimen/_20ssp</dimen>
+    <dimen name="favorite_button_size">@dimen/_48sdp</dimen>
+</resources>
