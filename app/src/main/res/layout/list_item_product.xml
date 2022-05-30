@@ -23,25 +23,25 @@
         android:layout_marginTop="@dimen/padding_standard"
         android:layout_marginEnd="@dimen/padding_standard"
         android:layout_marginBottom="@dimen/padding_half"
+        android:text="Product Name"
         android:textColor="#07195C"
         android:textSize="@dimen/product_name_text_size"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/productImage"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Product Name" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/detail"
+        android:id="@+id/details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_standard"
         android:layout_marginTop="@dimen/padding_half"
         android:layout_marginBottom="@dimen/padding_half"
+        android:text="Detail"
         android:textSize="@dimen/_16ssp"
         app:layout_constraintStart_toEndOf="@+id/productImage"
-        app:layout_constraintTop_toBottomOf="@+id/productName"
-        tools:text="Detail" />
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
 
     <TextView
         android:id="@+id/price"
@@ -49,11 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_standard"
         android:layout_marginTop="@dimen/padding_half"
-        android:layout_marginBottom="@dimen/padding_half"
+        android:text="Price"
         app:layout_constraintStart_toEndOf="@+id/productImage"
-        app:layout_constraintTop_toBottomOf="@+id/detail"
-
-        tools:text="Price" />
+        app:layout_constraintTop_toBottomOf="@+id/details" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/favoriteButton"
@@ -68,12 +66,11 @@
         android:scaleType="fitXY"
         android:src="@drawable/ic_favorite"
         app:backgroundTint="@color/white"
-        app:fabSize="auto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/productImage"
+        app:layout_constraintStart_toEndOf="@id/productImage"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:tint="@color/favorite_button"
-        tools:ignore="MissingConstraints,RedundantDescriptionCheck" />
+        tools:ignore="MissingConstraints,RedundantDescriptionCheck"
+        tools:layout_editor_absoluteX="138dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/shoppingButton"
@@ -87,8 +84,6 @@
         android:minHeight="48dp"
         android:scaleType="fitXY"
         app:backgroundTint="@color/white"
-        app:fabSize="auto"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/favoriteButton"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:srcCompat="@drawable/ic_shopping_card"

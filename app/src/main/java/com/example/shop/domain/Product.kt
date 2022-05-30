@@ -1,9 +1,9 @@
-package com.example.shop.Model
+package com.example.shop.domain
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Products(
+data class Product(
     @SerializedName("category")
     val category: ReturnCategory,
     @SerializedName("colour")

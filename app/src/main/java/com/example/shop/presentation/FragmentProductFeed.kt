@@ -1,16 +1,17 @@
-package com.example.shop.Presentation
+package com.example.shop.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.shop.R
 import com.example.shop.databinding.FragmentProductFeedBinding
 
 class FragmentProductFeed : Fragment() {
-
-//    private val adapter = ProductsListAdapter(ProductStore.getProduct())
+    private lateinit var layoutManager: StaggeredGridLayoutManager
 
     private var _binding: FragmentProductFeedBinding? = null
 
@@ -22,26 +23,22 @@ class FragmentProductFeed : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        _binding = FragmentProductFeedBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View? {
+        return inflater.inflate(R.layout.list_item_product, container, false)
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.apply {
-            productsRecyclerView.layoutManager = LinearLayoutManager(activity)
-//            productsRecyclerView.adapter = adapter
-        }
+        layoutManager = StaggeredGridLayoutManager(2, GridLayoutManager.VERTICAL)
     }
 }

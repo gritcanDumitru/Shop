@@ -1,14 +1,21 @@
 package com.example.shop
 
+import android.annotation.SuppressLint
+import android.net.ConnectivityManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.shop.Presentation.FragmentProductFeed
+import com.example.shop.data.NetworkStatusChecker
 import com.example.shop.databinding.ActivityMainBinding
+import com.example.shop.presentation.FragmentProductFeed
 
+@SuppressLint("NewApi")
 class MainActivity : AppCompatActivity() {
 
+    private val networkStatusChecker by lazy {
+        NetworkStatusChecker(getSystemService(ConnectivityManager::class.java))
+    }
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
