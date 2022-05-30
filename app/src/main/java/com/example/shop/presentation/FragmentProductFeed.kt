@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.shop.R
 import com.example.shop.databinding.FragmentProductFeedBinding
 
 class FragmentProductFeed : Fragment() {
@@ -32,8 +31,9 @@ class FragmentProductFeed : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        return inflater.inflate(R.layout.list_item_product, container, false)
+    ): View {
+        _binding = FragmentProductFeedBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 
