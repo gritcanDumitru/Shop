@@ -21,10 +21,18 @@
         android:id="@+id/fragmentFavorites"
         android:name="com.example.shop.presentation.FragmentFavorites"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_fragmentFavorites_to_fragmentProductDetails"
+            app:destination="@id/fragmentProductDetails" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentProductDetails"
         android:name="com.example.shop.presentation.FragmentProductDetails"
         android:label="fragment_product_details"
-        tools:layout="@layout/fragment_product_details" />
+        tools:layout="@layout/fragment_product_details" >
+        <action
+            android:id="@+id/action_fragmentProductDetails_to_fragmentProductFeed"
+            app:destination="@id/fragmentProductFeed" />
+    </fragment>
 </navigation>
