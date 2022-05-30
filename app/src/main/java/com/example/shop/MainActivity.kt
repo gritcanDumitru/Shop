@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.shop
 
 import android.annotation.SuppressLint
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupViewPager()
+
 
     }
 

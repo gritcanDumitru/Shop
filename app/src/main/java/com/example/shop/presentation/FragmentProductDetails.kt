@@ -8,8 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.shop.R
+import com.example.shop.domain.Product
 
 class FragmentProductDetails : Fragment() {
+    private val product: Product
+        get() {
+            TODO()
+        }
 
     companion object {
         private const val EXTRA_PRODUCT_ID = "EXTRA_PRODUCT_ID"
@@ -27,7 +32,7 @@ class FragmentProductDetails : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_product_details, container, false)
-    }
-
-
+       }
 }
+
+
