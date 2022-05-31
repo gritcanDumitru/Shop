@@ -1,4 +1,4 @@
-package com.raywenderlich.android.creatures.ui
+package com.example.shop.presentation
 
 import android.graphics.Canvas
 import android.graphics.Paint

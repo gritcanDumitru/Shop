@@ -7,15 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.shop.R
-import com.example.shop.domain.Product
+import com.example.shop.databinding.FragmentProductDetailsBinding
 
-//TODO: use ViewBinding for Fragments
 class FragmentProductDetails : Fragment() {
-    private val product: Product
-        get() {
-            TODO()
-        }
+
+    private var _binding: FragmentProductDetailsBinding? = null
+
+    private val binding get() = _binding!!
 
     //TODO: use Navigation components to navigate from fragments
     //TODO: use Safe Args to pass arguments from fragment to fragment
@@ -35,8 +33,8 @@ class FragmentProductDetails : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product_details, container, false)
+        _binding = FragmentProductDetailsBinding.inflate(inflater, container, false)
+        return binding.root
        }
 }
 

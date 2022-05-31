@@ -15,57 +15,55 @@
         tools:ignore="MissingConstraints"
         tools:src="@tools:sample/avatars" />
 
-    <!-- TODO: do not use android:text if you want to check how it looks
-    Use tools:text instead without resources -->
     <TextView
         android:id="@+id/productName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_20sdp"
-        android:text="Name"
         android:textAlignment="center"
         android:textColor="@color/shop_color"
         android:textSize="@dimen/product_name_text_size"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+        app:layout_constraintTop_toBottomOf="@+id/productImage"
+        tools:text="Name" />
 
     <TextView
         android:id="@+id/details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
-        android:text="Detail"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/productName" />
+        app:layout_constraintTop_toBottomOf="@+id/productName"
+        tools:text="Detail" />
 
     <TextView
         android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
-        android:text="Price"
-        android:textColor="@color/shop_color"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/details" />
+        android:textColor="@color/shop_color"
+        app:layout_constraintTop_toBottomOf="@+id/details"
+        tools:text="Price" />
 
     <TextView
         android:id="@+id/info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_20sdp"
-        android:text="INFORMATION"
         android:textColor="@color/shop_color"
         android:textSize="@dimen/product_name_text_size"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        tools:text="INFORMATION" />
 
     <TextView
         android:id="@+id/infoView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
-        android:text="info"
-        app:layout_constraintTop_toBottomOf="@+id/info" />
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        tools:text="info" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

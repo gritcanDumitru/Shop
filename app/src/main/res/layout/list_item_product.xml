@@ -17,7 +17,6 @@
         app:srcCompat="@mipmap/ic_launcher"
         tools:ignore="MissingConstraints" />
 
-    <!-- TODO: tools:text -->
     <!-- TODO: do not hardcode any resources, use colors/styles references -->
     <TextView
         android:id="@+id/productName"
@@ -27,7 +26,7 @@
         android:layout_marginTop="@dimen/padding_standard"
         android:layout_marginEnd="@dimen/padding_standard"
         android:layout_marginBottom="@dimen/padding_half"
-        android:text="Product Name"
+        tools:text="Product Name"
         android:textColor="#07195C"
         android:textSize="@dimen/product_name_text_size"
         android:textStyle="bold"
@@ -42,7 +41,7 @@
         android:layout_marginStart="@dimen/padding_standard"
         android:layout_marginTop="@dimen/padding_half"
         android:layout_marginBottom="@dimen/padding_half"
-        android:text="Detail"
+        tools:text="Detail"
         android:textSize="@dimen/_16ssp"
         app:layout_constraintStart_toEndOf="@+id/productImage"
         app:layout_constraintTop_toBottomOf="@+id/productName" />
@@ -53,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_standard"
         android:layout_marginTop="@dimen/padding_half"
-        android:text="Price"
+        tools:text="Price"
         app:layout_constraintStart_toEndOf="@+id/productImage"
         app:layout_constraintTop_toBottomOf="@+id/details" />
 

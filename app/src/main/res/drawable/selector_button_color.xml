@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true">
+        <shape>
+            <solid android:color="@color/shop_color" />
+            <corners android:radius="@dimen/_2sdp" />
+        </shape>
+    </item>
+
+    <item android:state_activated="false">
+        <shape>
+            <solid android:color="@color/enable_btn_color" />
+            <corners android:radius="@dimen/_2sdp" />
+        </shape>
+    </item>
+</selector>

@@ -1,6 +1,5 @@
 package com.example.shop.data
 
-import android.annotation.SuppressLint
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 
@@ -12,8 +11,6 @@ class NetworkStatusChecker(private val connectivityManager: ConnectivityManager?
         }
     }
 
-    //TODO: remove suppress dangerous warning
-    @SuppressLint("NewApi")
     fun hasInternetConnection(): Boolean {
         val network = connectivityManager?.activeNetwork ?: return false
         val capabilities = connectivityManager.getNetworkCapabilities(network) ?: return false

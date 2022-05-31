@@ -15,6 +15,7 @@
     <color name="selectedItem">#E1BEE7</color>
     <color name="red">#FF0000</color>
     <color name="favorite_button">#E3453A</color>
-    <color name="shop_color">#182867</color>
+    <color name="shop_color">#140078</color>
+    <color name="enable_btn_color">#E5EBE9</color>
 
 </resources>
