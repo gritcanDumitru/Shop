@@ -10,6 +10,7 @@ import com.example.shop.databinding.ActivityMainBinding
 @SuppressLint("NewApi")
 class MainActivity : AppCompatActivity() {
 
+    //Test comment
     private val networkStatusChecker by lazy {
         NetworkStatusChecker(getSystemService(ConnectivityManager::class.java))
     }
