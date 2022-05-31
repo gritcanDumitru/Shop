@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.shop.R
 
+//TODO: use ViewBinding for Fragments
 class FragmentFavorites : Fragment() {
 
     override fun onCreateView(

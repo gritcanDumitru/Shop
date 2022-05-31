@@ -9,6 +9,10 @@ import com.example.shop.MainActivity
 import com.example.shop.R.layout.activity_splash
 import com.example.shop.databinding.ActivitySplashBinding
 
+//TODO: this is not properly integration of SplashScreen
+//You can use new SplashScreen API what was introduced with compat in android 12 or
+//you can do it in old-fashioned way with theme changing.
+//TODO: suppress warnings ONLY IF YOU KNOW what you do and you are absolutely confident that you implemented everything right.
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity : AppCompatActivity() {
 

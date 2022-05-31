@@ -12,6 +12,7 @@ class NetworkStatusChecker(private val connectivityManager: ConnectivityManager?
         }
     }
 
+    //TODO: remove suppress dangerous warning
     @SuppressLint("NewApi")
     fun hasInternetConnection(): Boolean {
         val network = connectivityManager?.activeNetwork ?: return false

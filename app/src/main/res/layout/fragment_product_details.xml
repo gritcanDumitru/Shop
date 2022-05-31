@@ -15,6 +15,8 @@
         tools:ignore="MissingConstraints"
         tools:src="@tools:sample/avatars" />
 
+    <!-- TODO: do not use android:text if you want to check how it looks
+    Use tools:text instead without resources -->
     <TextView
         android:id="@+id/productName"
         android:layout_width="match_parent"

@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- TODO: it is a good practice to name colors with their hexes, like favorite_button_e3453a -->
     <color name="colorPrimary">#512da8</color>
     <color name="colorPrimaryDark">#140078</color>
     <color name="colorAccent">#8559da</color>

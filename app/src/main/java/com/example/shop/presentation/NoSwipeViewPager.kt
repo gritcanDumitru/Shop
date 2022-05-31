@@ -35,7 +35,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import androidx.viewpager.widget.ViewPager
 
-
+//TODO: is useless for this project
 class NoSwipeViewPager(context: Context, attrs: AttributeSet) : ViewPager(context, attrs) {
 
   override fun onTouchEvent(event: MotionEvent) = false

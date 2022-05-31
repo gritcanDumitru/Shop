@@ -16,6 +16,7 @@ class FragmentProductFeed : Fragment() {
 
     private val binding get() = _binding!!
 
+    //TODO: use Navigation component to navigate from fragments
     companion object {
         fun newInstance(): FragmentProductFeed {
             return FragmentProductFeed()
@@ -37,6 +38,8 @@ class FragmentProductFeed : Fragment() {
     }
 
 
+
+    //TODO: start with default LinearLayoutManager
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         layoutManager = StaggeredGridLayoutManager(2, GridLayoutManager.VERTICAL)

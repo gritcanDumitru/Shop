@@ -10,12 +10,17 @@ import androidx.fragment.app.Fragment
 import com.example.shop.R
 import com.example.shop.domain.Product
 
+//TODO: use ViewBinding for Fragments
 class FragmentProductDetails : Fragment() {
     private val product: Product
         get() {
             TODO()
         }
 
+    //TODO: use Navigation components to navigate from fragments
+    //TODO: use Safe Args to pass arguments from fragment to fragment
+    //Fragments cannot receive intents or have constructors. Old realisation without safe args
+    //was to use "newInstance" template with fragment arguments
     companion object {
         private const val EXTRA_PRODUCT_ID = "EXTRA_PRODUCT_ID"
 

@@ -12,6 +12,9 @@ class MainActivity : AppCompatActivity() {
 
     //TODO: remove test comments
     //Test comment
+
+    //TODO: MinSDK of this object is 23, the project min is 22. If you want to use is (do not know for that for sure)
+    //TODO: you need to set minSDK to 23 or make two different realisations for <23 and 23+ SDKs
     private val networkStatusChecker by lazy {
         NetworkStatusChecker(getSystemService(ConnectivityManager::class.java))
     }
