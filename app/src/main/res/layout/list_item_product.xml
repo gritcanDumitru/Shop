@@ -28,7 +28,7 @@
         android:layout_marginBottom="@dimen/padding_half"
         tools:text="Product Name"
         android:textColor="#07195C"
-        android:textSize="@dimen/product_name_text_size"
+        android:textSize="@dimen/_20ssp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/productImage"
         app:layout_constraintTop_toTopOf="parent"
@@ -72,7 +72,7 @@
         app:backgroundTint="@color/white"
         app:layout_constraintStart_toEndOf="@id/productImage"
         app:layout_constraintTop_toBottomOf="@+id/price"
-        app:tint="@color/favorite_button"
+        app:tint="@color/favorite_button_e3453a"
         tools:ignore="MissingConstraints,RedundantDescriptionCheck"
         tools:layout_editor_absoluteX="138dp" />
 
@@ -91,7 +91,6 @@
         app:layout_constraintStart_toEndOf="@+id/favoriteButton"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:srcCompat="@drawable/ic_shopping_card"
-        app:tint="@color/shop_color" />
-
+        app:tint="@color/shop_color_140078" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

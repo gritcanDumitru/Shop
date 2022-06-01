@@ -24,5 +24,9 @@
     <fragment
         android:id="@+id/fragmentFavorites"
         android:name="com.example.shop.presentation.FragmentFavorites"
-        android:label="FragmentFavorites" />
+        android:label="FragmentFavorites" >
+        <action
+            android:id="@+id/action_fragmentFavorites_to_fragmentProductFeed"
+            app:destination="@id/fragmentProductFeed" />
+    </fragment>
 </navigation>

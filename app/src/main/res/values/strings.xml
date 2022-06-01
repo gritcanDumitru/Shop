@@ -6,4 +6,8 @@
     <string name="content_description_product_image">Product Image</string>
     <string name="favorite_button">Product Favorit Button</string>
     <string name="shopping_button">Shopping Cart Button</string>
+    <string name="filter_button">Button</string>
+    <string name="image_filter">Image Filter</string>
+    <string name="filter_bar">Filter Bar</string>
+    <string name="toolbar_button">Toolbar button</string>
 </resources>

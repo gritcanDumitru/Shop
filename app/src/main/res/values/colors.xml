@@ -8,14 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- TODO: it is a good practice to name colors with their hexes, like favorite_button_e3453a -->
-    <color name="colorPrimary">#512da8</color>
-    <color name="colorPrimaryDark">#140078</color>
-    <color name="colorAccent">#8559da</color>
-    <color name="selectedItem">#E1BEE7</color>
-    <color name="red">#FF0000</color>
-    <color name="favorite_button">#E3453A</color>
-    <color name="shop_color">#140078</color>
-    <color name="enable_btn_color">#E5EBE9</color>
+    <color name="color_primary_512da8">#512da8</color>
+    <color name="color_primary_dark_140078">#140078</color>
+    <color name="color_accent_8559da">#8559da</color>
+    <color name="selected_item_e1bee7">#E1BEE7</color>
+    <color name="red_ff0000">#FF0000</color>
+    <color name="favorite_button_e3453a">#E3453A</color>
+    <color name="shop_color_140078">#140078</color>
+    <color name="enable_btn_color_e5ebe9">#E5EBE9</color>
 
 </resources>
