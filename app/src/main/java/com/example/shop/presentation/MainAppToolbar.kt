@@ -11,8 +11,11 @@ class MainAppToolbar @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
 ) : LinearLayout(context, attrs, defStyleAttr) {
+
+    //TODO: make binding private
     val binding = ToolbarFeedBinding.inflate(LayoutInflater.from(context), this, true)
 
+    //TODO: add set Images functions, like setRightIcon(@DrawableRes image: Int) {}
 
     fun setOnFavoriteClickListener(action: () -> Unit) {
         action()

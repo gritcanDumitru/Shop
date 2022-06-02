@@ -9,6 +9,7 @@ import java.math.BigDecimal
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    //TODO: remove test value a
     val a = BigDecimal(10)
 
     override fun onCreate(savedInstanceState: Bundle?) {

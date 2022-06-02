@@ -4,6 +4,7 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import androidx.recyclerview.widget.RecyclerView
 
+//TODO: you can use simpler item decoration in RecyclerView.ItemDecoration() or add a view into item XML
 class DividerItemDecoration(color: Int, private val heightInPixels: Int) : RecyclerView.ItemDecoration() {
 
     private val paint = Paint()

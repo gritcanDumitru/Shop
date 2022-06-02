@@ -27,6 +27,10 @@ class FragmentFavorites : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //TODO: change toolbar interfaces logic
+        //You need to provide to yourself a couple of functions, that you will use to configure a
+        //toolbar, like [toolbar.setOnBackClickListener], do not apply something on binding directly
+        //if it is not necessary
         binding.toolbar.binding.apply {
 
             toolbarUser.isVisible = false
