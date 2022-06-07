@@ -1,5 +1,4 @@
 package com.example.shop.data
 
-class RetrofitService {
-
+interface ProductsService {
 }
