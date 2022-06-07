@@ -8,9 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.shop.databinding.FragmentProductDetailsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FragmentProductDetails : Fragment() {
-
     private var _binding: FragmentProductDetailsBinding? = null
 
     private val binding get() = _binding!!
@@ -35,7 +36,8 @@ class FragmentProductDetails : Fragment() {
     ): View? {
         _binding = FragmentProductDetailsBinding.inflate(inflater, container, false)
         return binding.root
-       }
+    }
+
 }
 
 

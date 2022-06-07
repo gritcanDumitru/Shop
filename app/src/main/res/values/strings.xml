@@ -10,4 +10,5 @@
     <string name="image_filter">Image Filter</string>
     <string name="filter_bar">Filter Bar</string>
     <string name="toolbar_button">Toolbar button</string>
+    <string name="product_card">Product Card</string>
 </resources>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
     <!-- TODO: use tools:ignore only if you know for sure what you do -->
     <!-- TODO: this view misses some constraints -->
@@ -26,13 +27,13 @@
         android:layout_marginTop="@dimen/padding_standard"
         android:layout_marginEnd="@dimen/padding_standard"
         android:layout_marginBottom="@dimen/padding_half"
-        tools:text="Product Name"
         android:textColor="#07195C"
         android:textSize="@dimen/_20ssp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/productImage"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Product Name" />
 
     <TextView
         android:id="@+id/details"
@@ -41,10 +42,10 @@
         android:layout_marginStart="@dimen/padding_standard"
         android:layout_marginTop="@dimen/padding_half"
         android:layout_marginBottom="@dimen/padding_half"
-        tools:text="Detail"
         android:textSize="@dimen/_16ssp"
         app:layout_constraintStart_toEndOf="@+id/productImage"
-        app:layout_constraintTop_toBottomOf="@+id/productName" />
+        app:layout_constraintTop_toBottomOf="@+id/productName"
+        tools:text="Detail" />
 
     <TextView
         android:id="@+id/price"
@@ -52,9 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_standard"
         android:layout_marginTop="@dimen/padding_half"
-        tools:text="Price"
         app:layout_constraintStart_toEndOf="@+id/productImage"
-        app:layout_constraintTop_toBottomOf="@+id/details" />
+        app:layout_constraintTop_toBottomOf="@+id/details"
+        tools:text="Price" />
 
     <!-- TODO: shadows of this view will be cut, add some bottom paddings to it. -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -64,17 +65,17 @@
         android:layout_marginStart="@dimen/padding_standard"
         android:layout_marginTop="@dimen/padding_standard"
         android:layout_marginBottom="@dimen/padding_standard"
+        android:backgroundTint="@color/white"
         android:contentDescription="@string/favorite_button"
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_favorite"
-        app:backgroundTint="@color/white"
+        android:tint="@color/favorite_button_e3453a"
         app:layout_constraintStart_toEndOf="@id/productImage"
         app:layout_constraintTop_toBottomOf="@+id/price"
-        app:tint="@color/favorite_button_e3453a"
-        tools:ignore="MissingConstraints,RedundantDescriptionCheck"
-        tools:layout_editor_absoluteX="138dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints,RedundantDescriptionCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/shoppingButton"
@@ -83,14 +84,14 @@
         android:layout_marginStart="@dimen/padding_standard"
         android:layout_marginTop="@dimen/padding_standard"
         android:layout_marginBottom="@dimen/padding_standard"
+        android:backgroundTint="@color/white"
         android:contentDescription="@string/shopping_button"
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:scaleType="fitXY"
-        app:backgroundTint="@color/white"
+        android:src="@drawable/ic_shopping_card"
+        android:tint="@color/shop_color_140078"
         app:layout_constraintStart_toEndOf="@+id/favoriteButton"
-        app:layout_constraintTop_toBottomOf="@+id/price"
-        app:srcCompat="@drawable/ic_shopping_card"
-        app:tint="@color/shop_color_140078" />
+        app:layout_constraintTop_toBottomOf="@+id/price" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
