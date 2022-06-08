@@ -13,5 +13,6 @@
     <dimen name="card_elevation">@dimen/_3sdp</dimen>
     <dimen name="detail_text_size">@dimen/_9ssp</dimen>
     <dimen name="padding_standard_x2">@dimen/_32sdp</dimen>
+    <dimen name="padding_stan">@dimen/_32sdp</dimen>
 
 </resources>
