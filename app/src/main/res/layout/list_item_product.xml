@@ -10,26 +10,29 @@
     <!-- TODO: this view misses some constraints -->
     <ImageView
         android:id="@+id/productImage"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_90sdp"
+        android:layout_width="@dimen/_89sdp"
+        android:layout_height="@dimen/_89sdp"
         android:layout_marginTop="@dimen/padding_standard"
         android:contentDescription="@string/content_description_product_image"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher"
         tools:ignore="MissingConstraints" />
 
     <!-- TODO: do not hardcode any resources, use colors/styles references -->
     <TextView
         android:id="@+id/productName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_standard"
+        android:layout_marginStart="@dimen/padding_half"
         android:layout_marginTop="@dimen/padding_standard"
-        android:layout_marginEnd="@dimen/padding_standard"
+        android:layout_marginEnd="@dimen/padding_standard_x2"
         android:layout_marginBottom="@dimen/padding_half"
+        android:gravity="top"
+        android:lineSpacingExtra="2sp"
         android:textColor="#07195C"
-        android:textSize="@dimen/_20ssp"
+        android:textSize="@dimen/_15ssp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/productImage"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
@@ -37,12 +40,15 @@
 
     <TextView
         android:id="@+id/details"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_standard"
+        android:layout_marginStart="@dimen/padding_half"
         android:layout_marginTop="@dimen/padding_half"
+        android:layout_marginEnd="@dimen/padding_standard_x2"
         android:layout_marginBottom="@dimen/padding_half"
-        android:textSize="@dimen/_16ssp"
+        android:maxLines="2"
+        android:textAppearance="@style/detail_item"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/productImage"
         app:layout_constraintTop_toBottomOf="@+id/productName"
         tools:text="Detail" />
@@ -51,47 +57,66 @@
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_standard"
+        android:layout_marginStart="@dimen/padding_half"
         android:layout_marginTop="@dimen/padding_half"
+        android:layout_marginEnd="@dimen/padding_standard_x2"
+        android:textColor="#035A97"
+        android:textSize="@dimen/_12ssp"
         app:layout_constraintStart_toEndOf="@+id/productImage"
         app:layout_constraintTop_toBottomOf="@+id/details"
         tools:text="Price" />
 
-    <!-- TODO: shadows of this view will be cut, add some bottom paddings to it. -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/favoriteButton"
+    <TextView
+        android:id="@+id/price2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_standard"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/padding_half"
+        android:layout_marginEnd="@dimen/padding_standard_x2"
+        android:gravity="center_vertical"
+        android:textColor="#9CB1BC"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintStart_toEndOf="@+id/price"
+        app:layout_constraintTop_toBottomOf="@+id/details"
+        tools:text="Price" />
+
+    <!-- TODO: shadows of this view will be cut, add some bottom paddings to it. -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_half"
         android:layout_marginTop="@dimen/padding_standard"
         android:layout_marginBottom="@dimen/padding_standard"
-        android:backgroundTint="@color/white"
-        android:contentDescription="@string/favorite_button"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_favorite"
-        android:tint="@color/favorite_button_e3453a"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/productImage"
         app:layout_constraintTop_toBottomOf="@+id/price"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints,RedundantDescriptionCheck" />
+        tools:ignore="MissingConstraints">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/shoppingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_standard"
-        android:layout_marginTop="@dimen/padding_standard"
-        android:layout_marginBottom="@dimen/padding_standard"
-        android:backgroundTint="@color/white"
-        android:contentDescription="@string/shopping_button"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_shopping_card"
-        android:tint="@color/shop_color_140078"
-        app:layout_constraintStart_toEndOf="@+id/favoriteButton"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
+        <ImageButton
+            android:id="@+id/favoriteButton"
+            android:layout_width="@dimen/_29sdp"
+            android:layout_height="@dimen/_29sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_item_icon_button"
+            android:contentDescription="@string/favorite_button"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:scaleType="fitXY"
+            />
+
+        <ImageButton
+            android:id="@+id/shoppingButton"
+            android:layout_width="@dimen/_29sdp"
+            android:layout_height="@dimen/_29sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/shopping_button"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_cart_empty"
+            app:layout_constraintStart_toEndOf="@+id/favoriteButton" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

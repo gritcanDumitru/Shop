@@ -13,9 +13,13 @@
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/grid_button_color.xml" value="0.1" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/grid_button_icon.xml" value="0.1" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_actions.xml" value="0.2645" />
-        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_favorite.xml" value="0.259" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_back.xml" value="0.1505" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_cart_empty.xml" value="0.1505" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_favorite.xml" value="0.176" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_favorite_active.xml" value="0.1505" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_favorite_border_black_24dp.xml" value="0.2" />
-        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_favorite_white.xml" value="0.2435" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_favorite_white.xml" value="0.264" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_favorites_text.xml" value="0.1505" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_grid_view.xml" value="0.216" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_grid_view1.xml" value="0.1595" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/ic_heart.xml" value="0.195" />
@@ -26,6 +30,8 @@
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/roundcorner.xml" value="0.1" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/selector_button_color.xml" value="0.1" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/selector_button_favorite.xml" value="0.1075" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/selector_item_button.xml" value="0.1505" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/drawable/selector_item_icon_button.xml" value="0.1505" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/activity_all_products.xml" value="0.264" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/activity_splash.xml" value="0.1" />
@@ -35,8 +41,8 @@
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/fragment_product_details.xml" value="0.176" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/fragment_product_feed.xml" value="0.4" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/list_item_card_product.xml" value="0.264" />
-        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/list_item_product.xml" value="0.264" />
-        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/toolbar_feed.xml" value="0.4" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/list_item_product.xml" value="0.8" />
+        <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/layout/toolbar_feed.xml" value="0.8800000000000001" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/menu/menu_all_products.xml" value="0.259375" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/menu/navigation.xml" value="0.1" />
         <entry key="..\:/Users/Gritcan/AndroidStudioProjects/Shop/app/src/main/res/menu/navigation_all_products.xml" value="0.264" />

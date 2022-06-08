@@ -6,23 +6,24 @@
     android:background="@color/shop_color_140078">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/toolbarUser"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_margin="@dimen/padding_half"
-        android:background="@color/shop_color_140078"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginHorizontal="@dimen/padding_half"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/toolbar_button"
         android:src="@drawable/ic_user"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/toolbarBack"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_margin="@dimen/padding_half"
-        android:background="@color/shop_color_140078"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginHorizontal="@dimen/padding_half"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/toolbar_button"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,11 +32,12 @@
 
     <ImageButton
         android:id="@+id/toolbarFavorite"
-        android:layout_width="@dimen/_22sdp"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginHorizontal="@dimen/padding_half"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:layout_gravity="end"
-        android:layout_margin="@dimen/padding_half"
-        android:background="@drawable/selector_button_favorite"
+        android:src="@drawable/selector_button_favorite"
         android:contentDescription="@string/toolbar_button"
          />
 

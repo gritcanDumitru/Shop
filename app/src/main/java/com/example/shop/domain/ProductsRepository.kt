@@ -10,4 +10,5 @@ class ProductsRepository(private val productsService: ProductsService) {
         val response = productsService.getProducts()
         return response.results
     }
+
 }

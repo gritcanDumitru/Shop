@@ -8,10 +8,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.OrientationHelper
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.*
 import com.example.shop.R
 import com.example.shop.databinding.FragmentProductFeedBinding
 import com.example.shop.utils.Result
@@ -19,22 +16,18 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class FragmentProductFeed : Fragment() {
-
-    private var myAdapter = ProductAdapter { productModel, state ->
+    private lateinit var layoutManager: StaggeredGridLayoutManager
+    private var myAdapterList = ProductAdapter { productModel, state ->
         //add to favourites
     }
-
+    private var myAdapterGrid = ProductCardAdapter { productModel, state ->
+        //add to favourites
+    }
     private var _binding: FragmentProductFeedBinding? = null
     private val binding get() = _binding!!
     private val viewModel by viewModels<FeedViewModel>()
 
     //TODO: use Navigation component to navigate from fragments
-
-    companion object {
-        fun newInstance(): FragmentProductFeed {
-            return FragmentProductFeed()
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,11 +46,16 @@ class FragmentProductFeed : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
         binding.apply {
 
-            productsRecyclerView.addItemDecoration(DividerItemDecoration(context, OrientationHelper.VERTICAL))
+            productsRecyclerView.addItemDecoration(DividerItemDecoration(context,
+                OrientationHelper.VERTICAL))
+            productsRecyclerView.addItemDecoration(DividerItemDecoration(context,
+                OrientationHelper.HORIZONTAL))
             productsRecyclerView.layoutManager = LinearLayoutManager(context)
-            productsRecyclerView.adapter = myAdapter
+            productsRecyclerView.adapter = myAdapterList
 
         }
 
@@ -65,7 +63,7 @@ class FragmentProductFeed : Fragment() {
         binding.productsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
-                myAdapter.scrollDirection = if (dy > 0) {
+                myAdapterList.scrollDirection = if (dy > 0) {
                     ProductAdapter.ScrollDirection.DOWN
                 } else {
                     ProductAdapter.ScrollDirection.UP
@@ -76,7 +74,7 @@ class FragmentProductFeed : Fragment() {
         viewModel.items.observe(viewLifecycleOwner) { result ->
             when (result) {
                 is Result.Failed -> showException(result.exception)
-                is Result.Success -> myAdapter.submitList(result.data)
+                is Result.Success -> myAdapterList.submitList(result.data)
             }
         }
 
@@ -100,26 +98,35 @@ class FragmentProductFeed : Fragment() {
         }
 
         binding.apply {
+
             lineButton.isActivated = true
 
             lineButton.setOnClickListener {
+
+                layoutManager = StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL)
+                productsRecyclerView.layoutManager = layoutManager
+                productsRecyclerView.adapter = myAdapterList
+
                 lineButton.isActivated = true
                 gridButton.isActivated = false
             }
 
             gridButton.setOnClickListener {
+
+                layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+                productsRecyclerView.layoutManager = layoutManager
+                productsRecyclerView.adapter = myAdapterGrid
+
                 lineButton.isActivated = false
                 gridButton.isActivated = true
 
 
             }
         }
-
-
     }
-
 
     private fun showException(exception: Exception) {
         TODO("Not yet implemented")
     }
+
 }

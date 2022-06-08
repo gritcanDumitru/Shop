@@ -8,9 +8,9 @@
         <item name="postSplashScreenTheme">@style/AppTheme</item>
 
         <!-- Status bar and Nav bar configs -->
-        <item name="android:statusBarColor" tools:targetApi="l">@color/shop_color_140078</item>
+        <item name="android:statusBarColor" >@color/shop_color_140078</item>
         <item name="android:navigationBarColor">@color/shop_color_140078</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightStatusBar" >false</item>
     </style>
 
 </resources>
