@@ -17,10 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class FragmentProductFeed : Fragment() {
     private lateinit var layoutManager: StaggeredGridLayoutManager
-    private var myAdapterList = ProductAdapter { productModel, state ->
-        //add to favourites
-    }
-    private var myAdapterGrid = ProductCardAdapter { productModel, state ->
+    private var myAdapter = ProductAdapter { productModel, state ->
         //add to favourites
     }
     private var _binding: FragmentProductFeedBinding? = null
@@ -31,7 +28,6 @@ class FragmentProductFeed : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -46,8 +42,6 @@ class FragmentProductFeed : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
         binding.apply {
 
             productsRecyclerView.addItemDecoration(DividerItemDecoration(context,
@@ -55,7 +49,7 @@ class FragmentProductFeed : Fragment() {
             productsRecyclerView.addItemDecoration(DividerItemDecoration(context,
                 OrientationHelper.HORIZONTAL))
             productsRecyclerView.layoutManager = LinearLayoutManager(context)
-            productsRecyclerView.adapter = myAdapterList
+            productsRecyclerView.adapter = myAdapter
 
         }
 
@@ -63,7 +57,7 @@ class FragmentProductFeed : Fragment() {
         binding.productsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
-                myAdapterList.scrollDirection = if (dy > 0) {
+                myAdapter.scrollDirection = if (dy > 0) {
                     ProductAdapter.ScrollDirection.DOWN
                 } else {
                     ProductAdapter.ScrollDirection.UP
@@ -74,7 +68,7 @@ class FragmentProductFeed : Fragment() {
         viewModel.items.observe(viewLifecycleOwner) { result ->
             when (result) {
                 is Result.Failed -> showException(result.exception)
-                is Result.Success -> myAdapterList.submitList(result.data)
+                is Result.Success -> myAdapter.submitList(result.data)
             }
         }
 
@@ -105,7 +99,7 @@ class FragmentProductFeed : Fragment() {
 
                 layoutManager = StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL)
                 productsRecyclerView.layoutManager = layoutManager
-                productsRecyclerView.adapter = myAdapterList
+                productsRecyclerView.adapter = myAdapter
 
                 lineButton.isActivated = true
                 gridButton.isActivated = false
@@ -115,7 +109,6 @@ class FragmentProductFeed : Fragment() {
 
                 layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
                 productsRecyclerView.layoutManager = layoutManager
-                productsRecyclerView.adapter = myAdapterGrid
 
                 lineButton.isActivated = false
                 gridButton.isActivated = true

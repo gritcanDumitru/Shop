@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:state_activated="true" android:drawable="@drawable/ic_favorite_active">
+            <shape>
+                <solid android:color="#42000000" />
+                <corners android:radius="@dimen/_15sdp"/>
+            </shape>
+        </item>
+        <item android:state_activated="false" android:drawable="@drawable/ic_favorite">
+            <shape>
+                <solid android:color="#42000000" />
+                <corners android:radius="@dimen/_15sdp"/>
+            </shape>
+        </item>
+    </selector>
